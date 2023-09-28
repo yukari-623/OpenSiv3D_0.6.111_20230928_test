@@ -36,7 +36,8 @@ void Main()
 	// [_] 地面
 	const P2Body ground = world.createLine(P2Static, Vec2{ 0, 0 }, Line{ -300, 150, 300, 150 });
 
-	const P2Body Bar = world.createLine(P2Static, Vec2{ -100,0 }, Line{ -300,0,50,100 });
+	const P2Body Bar = world.createLine(P2Static, Vec2{ 0,0 }, Line{ 85,-50,-30,40 });
+	//const P2Body Bar1 = world.createLine(P2Static, Vec2{ 0,0 }, Line{ 45,40,-50,-40 });
 
 	// 動物の物体
 	Array<P2Body> bodies;
@@ -104,6 +105,7 @@ void Main()
 			ground.draw(Palette::Red);
 
 			Bar.draw(Palette::Red);
+			//Bar1.draw(Palette::Red);
 
 			// 現在操作できる絵文字を描画する
 			textures[index].drawAt(Cursor::PosF(), AlphaF(0.5 + Periodic::Sine0_1(1s) * 0.5));
